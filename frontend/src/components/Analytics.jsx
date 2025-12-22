@@ -6,10 +6,12 @@ function Analytics({ kpis, equitySeries, trades }) {
     <section id="analytics">
       <div className="section-head">
         <div>
-          <div className="section-title">portfolio / analytics</div>
-          <div className="subtext">synthetic finance KPIs, trading signals, and product metrics — secure data hookup soon</div>
+          <div className="section-title">portfolio / analytics - Our trades win.</div>
+          <div className="subtext">some synthetic finance KPIs and trading signals, that reflect our actual portfolio with some privacy buffers</div>
+          <div className="subtext">NOTE:</div>
+          <div className="subtext">crypto assets/trades, not disclosed</div>
         </div>
-        <div className="pill accent">secure data hookup soon</div>
+        <div className="pill accent">as of Dec. 2025</div>
       </div>
       <div className="kpi-grid">
         {kpis.map((kpi, idx) => (

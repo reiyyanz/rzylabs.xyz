@@ -1,23 +1,27 @@
 function TradesTable({ trades }) {
   return (
     <div className="tile" style={{ marginTop: "16px" }}>
-      <div className="badge" style={{ marginBottom: "10px" }}>latest experiments / trades</div>
+      <div className="badge" style={{ marginBottom: "10px" }}>rrow series1 - partial portfolio holdings (Adjusted + Lagged)</div>
       <table>
         <thead>
           <tr>
-            <th>date</th>
-            <th>move</th>
-            <th>pnl</th>
+            <th>ticker</th>
+            <th>name</th>
+            <th>weight</th>
+            <th>cost basis</th>
+            <th>p/l</th>
             <th>note</th>
           </tr>
         </thead>
         <tbody>
-          {trades.map((trade, idx) => (
+          {trades.map((holding, idx) => (
             <tr key={idx}>
-              <td>{trade.date}</td>
-              <td>{trade.title}</td>
-              <td>{trade.pnl}</td>
-              <td>{trade.note}</td>
+              <td>{holding.ticker}</td>
+              <td>{holding.name}</td>
+              <td>{holding.weight}</td>
+              <td>{holding.cost}</td>
+              <td>{holding.returnPct}</td>
+              <td>{holding.note}</td>
             </tr>
           ))}
         </tbody>

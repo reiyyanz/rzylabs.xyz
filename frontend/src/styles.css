@@ -35,7 +35,7 @@ body::before {
   mix-blend-mode: soft-light;
   opacity: 0.35;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 }
 
 body::after {
@@ -43,16 +43,17 @@ body::after {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at 18% 25%, rgba(195, 181, 255, 0.08), transparent 45%),
-    radial-gradient(circle at 82% 12%, rgba(66, 83, 255, 0.08), transparent 55%),
+    linear-gradient(180deg, rgba(4, 6, 12, 0.18), rgba(4, 6, 12, 0.14)),
+    radial-gradient(circle at 18% 25%, rgba(195, 181, 255, 0.05), transparent 45%),
+    radial-gradient(circle at 82% 12%, rgba(66, 83, 255, 0.05), transparent 55%),
     url("/topographyBackground2.0.jpg");
-  background-size: auto, auto, cover;
-  background-position: center, center, center;
+  background-size: cover, auto, auto, cover;
+  background-position: center, center, center, center;
   background-repeat: no-repeat;
   mix-blend-mode: soft-light;
-  opacity: 0.32;
+  opacity: 0.24;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 }
 
 a {
@@ -78,7 +79,7 @@ header {
   border-radius: var(--radius);
   background: linear-gradient(120deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
   position: sticky;
-  top: 16px;
+  top: 0;
   backdrop-filter: blur(10px);
   overflow: hidden;
   isolation: isolate;
@@ -105,7 +106,6 @@ header::after {
 
 .brand {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
-  text-transform: lowercase;
   font-size: clamp(22px, 3vw, 30px);
   letter-spacing: 0.06em;
   display: flex;
@@ -176,6 +176,36 @@ nav a.active {
   -webkit-text-fill-color: #e8ebf7;
 }
 
+.sheen {
+  position: relative;
+  overflow: hidden;
+}
+
+.sheen::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -30%;
+  width: 60%;
+  height: 200%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0));
+  transform: skewX(-20deg);
+  animation: sheen-move 3.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes sheen-move {
+  0% {
+    left: -40%;
+  }
+  50% {
+    left: 110%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
 header * {
   position: relative;
   z-index: 1;
@@ -242,7 +272,8 @@ header * {
   padding: 22px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  gap: 12px;
   height: 100%;
 }
 
@@ -251,7 +282,6 @@ header * {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(32px, 5vw, 44px);
   letter-spacing: 0.01em;
-  text-transform: lowercase;
 }
 
 .hero-text p {
@@ -297,7 +327,6 @@ header * {
 .signal-label {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 0.08em;
-  text-transform: lowercase;
 }
 
 .subtext {
@@ -311,6 +340,18 @@ section {
   border: 1px solid var(--outline);
   border-radius: var(--radius);
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  position: relative;
+  isolation: isolate;
+  z-index: 1;
+}
+
+.hero-section {
+  margin-bottom: 24px;
+}
+
+.signal-strip {
+  position: relative;
+  z-index: 1;
 }
 
 .section-head {
@@ -324,7 +365,6 @@ section {
 .section-title {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 0.08em;
-  text-transform: lowercase;
   font-size: 20px;
 }
 
@@ -453,10 +493,69 @@ th {
 
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 16px;
 }
 
+.timeline-tile {
+  padding: 18px;
+}
+
+.timeline-row {
+  margin-top: 16px;
+}
+
+.timeline-horizontal {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+  align-items: start;
+  margin-top: 12px;
+}
+
+.timeline-track {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(195, 181, 255, 0.4), rgba(66, 83, 255, 0.25));
+  opacity: 0.6;
+}
+
+.timeline-point {
+  position: relative;
+  padding-top: 22px;
+}
+
+.timeline-point .dot {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-start), var(--accent-mid));
+  box-shadow: 0 0 12px rgba(66, 83, 255, 0.4);
+}
+
+.timeline-label {
+  padding-left: 18px;
+}
+
+.timeline-year {
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.timeline-text {
+  color: var(--muted);
+  font-size: 14px;
+}
 .cta {
   display: flex;
   flex-wrap: wrap;
@@ -497,6 +596,62 @@ th {
 .cta button.primary:hover {
   box-shadow: none;
   transform: translateY(-1px);
+}
+
+.input {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  outline: none;
+  min-width: 220px;
+}
+
+.input:focus {
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.socials {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  justify-content: center;
+}
+
+.social-link {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--outline);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  transition: 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-link:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.social-icon {
+  font-size: 16px;
+}
+
+.social-text {
+  background-image: linear-gradient(135deg, var(--accent-start), var(--accent-mid));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
 }
 
 footer {

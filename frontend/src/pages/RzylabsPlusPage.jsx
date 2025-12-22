@@ -7,7 +7,7 @@ function RzylabsPlusPage() {
       <div className="section-head">
         <div>
           <div className="section-title">rzylabs+ / archive</div>
-          <div className="subtext">16:9 frames, grain-first, heavy emphasis on the full library</div>
+          <div className="subtext">16:9 frames, 300 blk grain</div>
         </div>
         <div className="pill">browse</div>
       </div>
