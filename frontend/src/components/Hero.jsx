@@ -1,30 +1,41 @@
 import { Link } from "react-router-dom";
 
+function getGreeting() {
+  const hour = new Date().getHours();
+  if (hour < 3) return "It's Quite Late";
+  if (hour < 6) return "It's Quite Early";
+  if (hour < 12) return "Good Morning";
+  if (hour < 18) return "Good Afternoon";
+  return "Good Evening";
+}
+
 function Hero() {
+  const greeting = getGreeting();
+
   return (
     <section id="home" className="hero-section">
       <div className="hero">
         <div className="hero-media">
           <div className="hero-overlay"></div>
           <div className="hero-text">
-            <div className="pill accent">signal: rzylabs</div>
-            <h1>grainy future-facing visuals & fintech intuition</h1>
+            <div className="pill accent"> Welcome to rzylabs</div>
+            <h1>{greeting}, Visitor</h1>
             <p>
-              reiyyan zafar blends computer science, product, and markets with cinematic photography and videography.
-              building rzylabs as a dark, minimal lab for visuals, analytics, and experimental drops.
+              rzylabs is built as a dark, minimal lab for visuals, analytics, and experimental drops;
+              this is a vision you can trust the more you interact with.
             </p>
           </div>
         </div>
         <div className="tile">
-          <div className="badge">profile</div>
-          <h3>product x markets x camera</h3>
+          <div className="badge">meet one of your creators</div>
+          <h3>tech + finance + visuals</h3>
           <p className="subtext">
-            fintech product manager with cs+finance roots. experimenting with storytelling, signals, and design systems
-            that feel like instruments.
+            hey there, my name is reiyyan. i am a fintech product manager with a cs and finance background. i like experimenting with tech, analytics, and design systems
+            that tell a story. oh yea i like to keep it dark, clean, and grainy.
           </p>
           <div className="cta" style={{ marginTop: "16px" }}>
             <Link className="primary" to="/rzylabs-plus">view archive</Link>
-            <Link to="/portfolio">see analytics</Link>
+            <Link to="/portfolio">view portfolio</Link>
           </div>
         </div>
       </div>

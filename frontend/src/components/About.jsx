@@ -2,26 +2,28 @@ function About() {
   return (
     <section id="about">
       <div className="section-head">
-        <div className="section-title">about / method</div>
-        <div className="pill">product | markets | cinema</div>
+        <div className="section-title">about / advices to live by</div>
+        <div className="pill">tech | finance | cinematics</div>
       </div>
       <div className="about-grid">
         <div className="tile">
           <h3>profile</h3>
           <p className="subtext">
-            reiyyan zafar — fintech product manager with computer science and finance roots.
-            builds tools that feel cinematic; trades with a disciplined bias; captures frames that feel like signals.
+            Hey there, my name is Reiyyan Zafar. I am a fintech product manager with a B.S in Comp Sci and B.B.A in Finance, 
+            from the University of Wisconsin Madison.
+            
           </p>
         </div>
         <div className="tile">
           <h3>tools</h3>
           <p className="subtext">python, react, figma, after effects, premiere, lightroom.</p>
-          <p className="subtext">favorite lenses: 35mm, 50mm; aspect 16:9; love for analog grain.</p>
+          <p className="subtext">favorite lenses: 50mm; aspect 16:9; love for analog grain.</p>
         </div>
         <div className="tile">
           <h3>focus</h3>
           <p className="subtext">
-            crafting dark, minimal experiences. integrating analytics with aesthetics. preparing for rzylabs noir (clothing) and future product drops.
+            crafting dark, cutting edge, minimal experiences. integrating analytics with aesthetics. 
+            i also dabble in clothing/content creation (rzylabs noir) for future product drops.
           </p>
         </div>
       </div>

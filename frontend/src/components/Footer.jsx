@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer>
-      powered by rzylabs+ — a minimal, grain-first lab. all signals synthetic unless stated otherwise.
+      powered by rzylabs+ © 2025 rzylabs; from the brains of reiyyan zafar
     </footer>
   );
 }

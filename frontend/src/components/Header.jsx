@@ -25,7 +25,7 @@ function Header() {
           aria-label="rzylabs logo"
           className="brand-video"
         />
-        <span className="brand-chip">rzylabs studio</span>
+        <span className="brand-chip">studio</span>
       </div>
       <nav>
         <NavLink to="/">home</NavLink>
@@ -34,7 +34,7 @@ function Header() {
         <NavLink to="/rzylabs-plus">rzylabs+</NavLink>
         <NavLink
           to="/noir"
-          className={({ isActive }) => `nav-noir-text${isActive ? " active" : ""}`}
+          className={({ isActive }) => `nav-noir-text sheen${isActive ? " active" : ""}`}
         >
           rzylabs noir
         </NavLink>
