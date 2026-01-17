@@ -1,37 +1,61 @@
 function NoirPage() {
   return (
-    <section>
-      <div className="section-head">
-        <div>
-          <div className="section-title">rzylabs noir</div>
-          <div className="subtext"> for those who don't want to be seen.</div>
-          <div className="subtext"> ultra-dark capsule shop: clothing concepts, and stealth drops</div>
+    <>
+      <section className="noir-page">
+        <div className="section-head">
+          <div>
+            <div className="section-title">rzylabs noir</div>
+            <div className="subtext" style={{ fontStyle: 'italic' }}>for those who don't ____ __ __ ____.</div>
+          </div>
+          <div className="pill accent">Under Construction</div>
         </div>
-        <div className="pill accent">coming soon</div>
-      </div>
-      <div className="about-grid">
-        <div className="tile">
-          <h3>ethos</h3>
-          <p className="subtext">
-            noir keeps the palette muted and the grain turned up. materials, trims, and typography tuned for a lab aesthetic
-            you can wear. minimal marks, signal-based graphics.
-          </p>
+        <div className="about-grid">
+          <div className="tile">
+            <h3>design</h3>
+            <p className="subtext">
+              noir keeps the palette muted, dark, and minimal by design.
+            </p>
+          </div>
+          <div className="tile">
+            <h3>intent</h3>
+            <p className="subtext">
+            designed for those who prefer to keep a low profile while still making a statement. 
+            </p>
+          </div>
+          <div className="tile">
+            <h3>teasers</h3>
+            <p className="subtext">
+              none... or check back later, it's really up to you. 
+            </p>
+          </div>
         </div>
-        <div className="tile">
-          <h3>teasers</h3>
-          <p className="subtext">
-            silhouettes in development: shell jacket, heavyweight tee, cap with low-light reflective accents. expect restrained
-            gradients (purple to deep blue to black) and matte finishes.
-          </p>
+      </section>
+
+      <section className="noir-placeholder">
+        <div className="section-head">
+          <div className="section-title">concepts</div>
+          <div className="pill">renders coming soon</div>
         </div>
-        <div className="tile">
-          <h3>notify</h3>
-          <p className="subtext">
-            drop cadence will be slow and intentional. join the list to catch the first signal when the line opens.
-          </p>
+        <div className="about-grid">
+          <div className="tile concepts-gif" aria-label="concepts preview">
+            <img src="/concepts-preview.gif" alt="rzylabs noir concepts in motion" />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="noir-placeholder">
+        <div className="section-head">
+          <div className="section-title">Vault of Glass</div>
+          <div className="pill">locked</div>
+        </div>
+        <div className="about-grid">
+          <div className="tile noir-row noir-lock" aria-label="vault locked">
+            <img src="/vaultofglass.gif" alt="vault preview" className="noir-vault-gif" />
+            <span className="lock-icon" aria-hidden="true">🔒</span>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
 

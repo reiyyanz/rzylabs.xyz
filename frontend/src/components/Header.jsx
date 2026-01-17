@@ -29,8 +29,8 @@ function Header() {
       </div>
       <nav>
         <NavLink to="/">home</NavLink>
-        <NavLink to="/portfolio">portfolio</NavLink>
         <NavLink to="/about">about</NavLink>
+        <NavLink to="/portfolio">portfolio</NavLink>
         <NavLink to="/rzylabs-plus">rzylabs+</NavLink>
         <NavLink
           to="/noir"

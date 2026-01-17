@@ -31,7 +31,7 @@ function Hero() {
           <h3>tech + finance + visuals</h3>
           <p className="subtext">
             hey there, my name is reiyyan. i am a fintech product manager with a cs and finance background. i like experimenting with tech, analytics, and design systems
-            that tell a story. oh yea i like to keep it dark, clean, and grainy.
+            that tell a story. if you couldn't tell i like to keep it dark, clean, and grainy.
           </p>
           <div className="cta" style={{ marginTop: "16px" }}>
             <Link className="primary" to="/rzylabs-plus">view archive</Link>
