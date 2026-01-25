@@ -20,7 +20,7 @@ function About() {
           <p className="subtext">favorite lenses: 50mm; aspect 16:9; love analog grain.</p>
         </div>
         <div className="tile">
-          <h3>advices to live by</h3>
+          <h3>details</h3>
           <p className="subtext">
             crafting dark, cutting edge, minimal experiences. integrating analytics with aesthetics. 
             i also dabble in clothing/content creation (rzylabs noir) for future product drops.
