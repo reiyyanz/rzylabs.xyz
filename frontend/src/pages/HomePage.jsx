@@ -3,6 +3,8 @@ import { useState } from "react";
 import Hero from "../components/Hero";
 import Signals from "../components/Signals";
 import Contact from "../components/Contact";
+import EquityChart from "../components/EquityChart";
+import data from "../data";
 
 function HomePage() {
   const builds = [
@@ -16,7 +18,7 @@ function HomePage() {
     },
     {
       title: "photo drop",
-      description: "rzylabs theme/backdrop; where it all started.",
+      description: "rzylabs alternative logo.",
       cta: "view archive",
       href: "/rzylabs-plus",
       mediaType: "image",
@@ -26,7 +28,8 @@ function HomePage() {
       title: "analytics suite",
       description: "synthetic trading analytics with equity curves, trade logs, and metrics.",
       cta: "see analytics",
-      href: "/portfolio"
+      href: "/portfolio",
+      mediaType: "chart"
     }
   ];
 
@@ -39,7 +42,7 @@ function HomePage() {
       <Hero />
       <section>
         <div className="section-head">
-          <div className="section-title">inside the lab</div>
+          <div className="section-title">lab at a glance</div>
           <div className="pill accent">new</div>
         </div>
         <div className="about-grid">
@@ -68,6 +71,26 @@ function HomePage() {
                     alt={builds[activeBuild].title}
                     loading="lazy"
                   />
+                )}
+                {builds[activeBuild].mediaType === "chart" && (
+                  <>
+                    <div className="carousel-kpis">
+                      <div className="kpi-grid">
+                        {data.kpis
+                          .filter((kpi) => kpi.label.toLowerCase() !== "max drawdown")
+                          .map((kpi, idx) => (
+                          <div className="kpi" key={idx}>
+                            <div className="kpi-label">{kpi.label}</div>
+                            <div className="kpi-value">{kpi.value}</div>
+                            <div className="kpi-note">{kpi.note}</div>
+                          </div>
+                          ))}
+                      </div>
+                    </div>
+                    <div className="carousel-chart">
+                      <EquityChart series={data.equitySeries} />
+                    </div>
+                  </>
                 )}
               </div>
               <div className="carousel-controls">
