@@ -1,7 +1,7 @@
 function TradesTable({ trades }) {
   return (
     <div className="tile" style={{ marginTop: "16px" }}>
-      <div className="badge" style={{ marginBottom: "10px" }}>rrow series1 - partial portfolio holdings (Adjusted + Lagged)</div>
+      <div className="badge" style={{ marginBottom: "10px" }}>rrow series1 - portfolio holdings (Restricted View)</div>
       <table>
         <thead>
           <tr>

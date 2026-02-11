@@ -10,7 +10,7 @@ function Analytics({ kpis, equitySeries, trades }) {
           <div className="subtext">some synthetic finance KPIs and trading signals, that reflect our actual portfolio with some privacy buffers</div>
           <div className="subtext">Coming soon* crypto trades</div>
         </div>
-        <div className="pill accent">as of Jan. 2026</div>
+        <div className="pill accent">As of Jan. 1st, 2026</div>
       </div>
       <div className="kpi-grid">
         {kpis.map((kpi, idx) => (

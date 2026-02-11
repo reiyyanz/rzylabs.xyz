@@ -25,7 +25,7 @@ function Header() {
           aria-label="rzylabs logo"
           className="brand-video"
         />
-        <span className="brand-chip">studio</span>
+        <span className="brand-chip">.net</span>
       </div>
       <nav>
         <NavLink to="/">home</NavLink>
