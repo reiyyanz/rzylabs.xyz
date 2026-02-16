@@ -1,11 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { lazy, Suspense } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import HomePage from "./pages/HomePage";
-import RzylabsPlusPage from "./pages/RzylabsPlusPage";
-import NoirPage from "./pages/NoirPage";
-import PortfolioPage from "./pages/PortfolioPage";
-import AboutPage from "./pages/AboutPage";
+
+// Lazy load pages for code splitting
+const HomePage = lazy(() => import("./pages/HomePage"));
+const RzylabsPlusPage = lazy(() => import("./pages/RzylabsPlusPage"));
+const NoirPage = lazy(() => import("./pages/NoirPage"));
+const PortfolioPage = lazy(() => import("./pages/PortfolioPage"));
+const AboutPage = lazy(() => import("./pages/AboutPage"));
 
 function App() {
   return (
@@ -13,13 +16,15 @@ function App() {
       <div className="app-shell">
         <Header />
         <main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/rzylabs-plus" element={<RzylabsPlusPage />} />
-            <Route path="/noir" element={<NoirPage />} />
-            <Route path="/portfolio" element={<PortfolioPage />} />
-            <Route path="/about" element={<AboutPage />} />
-          </Routes>
+          <Suspense fallback={<div className="tile" style={{ minHeight: "50vh" }} />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/rzylabs-plus" element={<RzylabsPlusPage />} />
+              <Route path="/noir" element={<NoirPage />} />
+              <Route path="/portfolio" element={<PortfolioPage />} />
+              <Route path="/about" element={<AboutPage />} />
+            </Routes>
+          </Suspense>
         </main>
         <Footer />
       </div>

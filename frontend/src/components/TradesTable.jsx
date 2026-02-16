@@ -1,4 +1,6 @@
-function TradesTable({ trades }) {
+import { memo } from "react";
+
+const TradesTable = memo(function TradesTable({ trades }) {
   return (
     <div className="tile" style={{ marginTop: "16px" }}>
       <div className="badge" style={{ marginBottom: "10px" }}>rrow series1 - portfolio holdings (Restricted View)</div>
@@ -28,6 +30,6 @@ function TradesTable({ trades }) {
       </table>
     </div>
   );
-}
+});
 
 export default TradesTable;

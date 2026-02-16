@@ -20,6 +20,7 @@ function Header() {
           loop
           muted
           playsInline
+          preload="metadata"
           width="104"
           height="60"
           aria-label="rzylabs logo"
