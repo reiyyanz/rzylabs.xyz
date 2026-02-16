@@ -1,6 +1,6 @@
-import { useMemo } from "react";
+import { useMemo, memo } from "react";
 
-function EquityChart({ series }) {
+const EquityChart = memo(function EquityChart({ series }) {
   const { points, min, max } = useMemo(() => {
     const values = series.map((p) => p.value);
     const minVal = Math.min(...values);
@@ -41,6 +41,6 @@ function EquityChart({ series }) {
       <div className="meta">range: {min.toFixed(1)} → {max.toFixed(1)}</div>
     </div>
   );
-}
+});
 
 export default EquityChart;

@@ -42,6 +42,31 @@ const data = {
     { id: 4, title: "skyline pulse", year: 2022, tags: ["city", "night"], cover: "skyline pulse" },
     { id: 5, title: "velvet analog", year: 2023, tags: ["studio"], cover: "velvet analog" },
     { id: 6, title: "deep blue field", year: 2024, tags: ["landscape"], cover: "deep blue field" }
+  ],
+  builds: [
+    {
+      title: "recent build",
+      description: "latest coding project: Scott's Stocks — a full stack paper trading platform with custom charts, auth, and a fast UI.",
+      cta: "view build",
+      href: "/portfolio",
+      mediaType: "video",
+      mediaSrc: "/scotts-stocks-demo.mp4"
+    },
+    {
+      title: "photo drop",
+      description: "rzylabs alternative logo.",
+      cta: "view archive",
+      href: "/rzylabs-plus",
+      mediaType: "image",
+      mediaSrc: "/photo-drop.jpg"
+    },
+    {
+      title: "analytics suite",
+      description: "synthetic trading analytics with equity curves, trade logs, and metrics.",
+      cta: "see analytics",
+      href: "/portfolio",
+      mediaType: "chart"
+    }
   ]
 };
 

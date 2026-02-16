@@ -7,32 +7,7 @@ import EquityChart from "../components/EquityChart";
 import data from "../data";
 
 function HomePage() {
-  const builds = [
-    {
-      title: "recent build",
-      description: "latest coding project: Scott's Stocks — a full stack paper trading platform with custom charts, auth, and a fast UI.",
-      cta: "view build",
-      href: "/portfolio",
-      mediaType: "video",
-      mediaSrc: "/Scott's Stocks Demo.mov"
-    },
-    {
-      title: "photo drop",
-      description: "rzylabs alternative logo.",
-      cta: "view archive",
-      href: "/rzylabs-plus",
-      mediaType: "image",
-      mediaSrc: "/photo-drop.png"
-    },
-    {
-      title: "analytics suite",
-      description: "synthetic trading analytics with equity curves, trade logs, and metrics.",
-      cta: "see analytics",
-      href: "/portfolio",
-      mediaType: "chart"
-    }
-  ];
-
+  const { builds } = data;
   const [activeBuild, setActiveBuild] = useState(0);
   const onNext = () => setActiveBuild((prev) => (prev + 1) % builds.length);
   const onPrev = () => setActiveBuild((prev) => (prev - 1 + builds.length) % builds.length);
@@ -62,6 +37,7 @@ function HomePage() {
                     loop
                     muted
                     playsInline
+                    preload="metadata"
                   />
                 )}
                 {builds[activeBuild].mediaType === "image" && builds[activeBuild].mediaSrc && (

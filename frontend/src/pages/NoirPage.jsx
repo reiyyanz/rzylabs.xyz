@@ -50,7 +50,7 @@ function NoirPage() {
         </div>
         <div className="about-grid">
           <div className="tile concepts-gif" aria-label="concepts preview">
-            <img src="/concepts-preview.gif" alt="rzylabs noir concepts in motion" />
+            <video src="/concepts-preview.mp4" autoPlay loop muted playsInline preload="metadata" />
           </div>
         </div>
     </section>
@@ -62,7 +62,7 @@ function NoirPage() {
         </div>
         <div className="about-grid">
           <div className="tile noir-row noir-lock" aria-label="vault locked">
-            <img src="/vaultofglass.gif" alt="vault preview" className="noir-vault-gif" />
+            <video src="/vaultofglass.mp4" autoPlay loop muted playsInline preload="metadata" className="noir-vault-gif" />
             <button
               type="button"
               className="lock-icon lock-button"
