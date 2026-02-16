@@ -90,18 +90,25 @@ header {
   min-height: var(--header-height);
   border: 1px solid var(--outline);
   border-radius: var(--radius);
-  background:
-    linear-gradient(120deg, rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.6)),
-    url("/vaultofglass.gif");
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: soft-light;
+  background: linear-gradient(120deg, rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.6));
   position: sticky;
   top: var(--shell-top);
   backdrop-filter: blur(10px);
   overflow: hidden;
   isolation: isolate;
   z-index: 3;
+}
+
+.header-bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  mix-blend-mode: screen;
+  z-index: -1;
+  pointer-events: none;
 }
 
 header::before {

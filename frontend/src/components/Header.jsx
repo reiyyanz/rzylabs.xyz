@@ -12,6 +12,15 @@ function Header() {
 
   return (
     <header>
+      <video
+        className="header-bg-video"
+        src="/vaultofglass.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+      />
       <div className="brand">
         <video
           ref={videoRef}
