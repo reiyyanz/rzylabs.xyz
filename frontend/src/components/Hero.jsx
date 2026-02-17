@@ -22,7 +22,9 @@ function Hero() {
             <h1>{greeting}, Visitor</h1>
             <p>
               rzylabs is built as a dark, minimal lab for visuals, analytics, and experiments;
-              this is a vision you can trust the more you interact with.
+              <br></br>
+              <br></br>
+              "Currently under construction... but check back soon for some cool content. In the meantime, feel free to explore the page." -rz
             </p>
           </div>
         </div>
@@ -31,10 +33,7 @@ function Hero() {
             <div className="badge">meet your creator</div>
             <h3>tech + finance + visuals</h3>
             <p className="subtext">
-              hey there, my name is reiyyan. i am a fintech product manager with a cs and finance background. i like experimenting with tech, analytics, and design systems
-              that tell a story. if you couldn't tell i like to keep things dark, clean, and grainy. 
-              <br></br>
-              <br></br> [page currently under construction...]
+              hey there, i'm reiyyan. a fintech pm with a cs and finance background. i build at the intersection of tech, finance, and design. dark, clean, grainy; that's the aesthetic.
             </p>
             <div className="cta" style={{ marginTop: "16px" }}>
               <Link className="primary" to="/rzylabs-plus">view archive</Link>
