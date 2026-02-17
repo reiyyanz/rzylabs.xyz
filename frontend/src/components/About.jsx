@@ -10,7 +10,9 @@ function About() {
           <div className="tile">
             <h3>bios</h3>
             <p className="subtext">
-              Hey there, my name is Reiyyan (ray-on) Zafar. I am a fintech product analyst and the head chef of <i>rzylabs.net</i>
+              Hey there, my name is Reiyyan (ray-on) Zafar. 
+              <br></br>
+              I am a fintech product analyst and the head chef for <i>rzylabs.net</i>
             </p>
           </div>
           <div className="tile">
@@ -21,7 +23,7 @@ function About() {
           <div className="tile">
             <h3>geographics</h3>
             <p className="subtext">wisconsin born and raised; <br></br>
-            currently running between madison + milwuakee, wi and chicago, il</p>
+            currently running between madison/milwuakee, wi and chicago, il</p>
           </div>
           <div className="tile">
             <h3>education</h3>
@@ -30,11 +32,13 @@ function About() {
           </div>
           <div className="tile">
             <h3>hobbies/likes</h3>
-            <p className="subtext">mountains, cars, videography, & portfolio management</p>
+            <p className="subtext">mountains, cars, UI/UX design, & portfolio management
+              <br></br> "giving people something to talk about"
+            </p>
           </div>
         </div>
         <div className="tile">
-          <h3>3D Render</h3>
+          <h3>Most *probable 3D Scan of <i>Reiyyan Zafar</i></h3>
           <div className="about-photo-frame">
             <img src="/profile.PNG" alt="Reiyyan portrait" className="about-photo" />
           </div>
