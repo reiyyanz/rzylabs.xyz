@@ -15,28 +15,28 @@ function NoirPage() {
       <section className="noir-page">
         <div className="section-head">
           <div>
-            <div className="section-title">rzylabs noir</div>
-            <div className="subtext" style={{ fontStyle: 'italic' }}>for those who don't ____ __ __ ____.</div>
+            <div className="section-title nav-noir-text">Resonance Engine (Preview)</div>
+            <div className="subtext" style={{ fontStyle: 'italic' }}> Seek your Alpha.</div>
           </div>
-          <div className="pill accent">Under Construction</div>
+          <div className="pill nav-noir-text">Under Construction</div>
         </div>
         <div className="about-grid">
           <div className="tile">
             <h3>design</h3>
             <p className="subtext">
-              noir keeps the palette muted, dark, and minimal by design.
+              Resonance Engine is a financial computing engine with built in Market Intelligence, designed to power a suite of financial products and tools. 
             </p>
           </div>
           <div className="tile">
             <h3>intent</h3>
             <p className="subtext">
-            [REDACTED]
+            We help you make financial decisons based on our resonance engine's insights, so you can seek your alpha.
             </p>
           </div>
           <div className="tile">
             <h3>teasers</h3>
             <p className="subtext">
-              none... at the moment, check back later. <br></br>
+              None... at the moment, check back later. <br></br>
               Or not it's really up to you. 
             </p>
           </div>
@@ -45,7 +45,7 @@ function NoirPage() {
 
       <section className="noir-placeholder">
         <div className="section-head">
-          <div className="section-title">concepts</div>
+          <div className="section-title">Analytics</div>
           <div className="pill">renders coming soon</div>
         </div>
         <div className="about-grid">
@@ -57,7 +57,7 @@ function NoirPage() {
 
       <section className="noir-placeholder">
         <div className="section-head">
-          <div className="section-title">RROW Series1</div>
+          <div className="section-title nav-noir-text">Resonance Engine Series1</div>
           <div className="pill">Login - Members only</div>
         </div>
         <div className="about-grid">
@@ -84,12 +84,12 @@ function NoirPage() {
                   onChange={(e) => setPassword(e.target.value)}
                   aria-label="vault password"
                 />
-                <button className="pill" type="submit">enter</button>
+                <button className="pill nav-noir-text" type="submit">enter</button>
                 {promptMessage && <span className="subtext">{promptMessage}</span>}
               </form>
             )}
           </div>
-          <div className="subtext" >*Member access to RROW Series1</div>
+          <div className="subtext" ><i>*Member access to RE Series1</i></div>
         </div>
       </section>
     </>

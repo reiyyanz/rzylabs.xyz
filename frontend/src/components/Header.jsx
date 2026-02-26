@@ -46,7 +46,7 @@ function Header() {
           to="/noir"
           className={({ isActive }) => `nav-noir-text sheen${isActive ? " active" : ""}`}
         >
-          rzylabs noir
+          Resonance Engine
         </NavLink>
       </nav>
     </header>

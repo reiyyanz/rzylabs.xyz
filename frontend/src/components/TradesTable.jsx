@@ -1,9 +1,16 @@
 import { memo } from "react";
 
 const TradesTable = memo(function TradesTable({ trades }) {
+  const getPnlColor = (returnPct) => {
+    if (returnPct.includes("[REDACTED]")) return "inherit";
+    if (returnPct.startsWith("-")) return "#f87171";
+    if (returnPct.startsWith("+")) return "#4ade80";
+    return "inherit";
+  };
+
   return (
     <div className="tile" style={{ marginTop: "16px" }}>
-      <div className="badge" style={{ marginBottom: "10px" }}>rrow series1 - portfolio holdings (Restricted View)</div>
+      <div className="badge" style={{ marginBottom: "10px" }}>RE series1 - Portfolio Holdings (Free View)</div>
       <table>
         <thead>
           <tr>
@@ -22,7 +29,7 @@ const TradesTable = memo(function TradesTable({ trades }) {
               <td>{holding.name}</td>
               <td>{holding.weight}</td>
               <td>{holding.cost}</td>
-              <td>{holding.returnPct}</td>
+              <td style={{ color: getPnlColor(holding.returnPct) }}>{holding.returnPct}</td>
               <td>{holding.note}</td>
             </tr>
           ))}

@@ -36,14 +36,14 @@ const data = {
     { date: "2026-02-01", value: 164 }
   ],
   trades: [
-    { ticker: "CASH", name: "liquid/money market", weight: "11.18%", cost: "$1.00", returnPct: "+0.0%", note: "buying power" },
+    { ticker: "CASH", name: "liquid/money market", weight: "11.18%", cost: "$1.00", returnPct: "0.0%", note: "buying power" },
     { ticker: "055630107", name: "[REDACTED]", weight: "0.00%", cost: "$0.18", returnPct: "+66.7%", note: "energy royalty trust hedge + SOLD" },
     { ticker: "AG", name: "first majestic silver", weight: "1.53%", cost: "$10.15", returnPct: "+8.2%", note: "silver / metals tilt" },
     { ticker: "AVR", name: "[REDACTED]", weight: "[REDACTED]", cost: "[REDACTED]", returnPct: "[REDACTED]", note: "[REDACTED]" },
     { ticker: "BRKB", name: "berkshire hathaway b", weight: "8.05%", cost: "$495.23", returnPct: "+1.6%", note: "hedge etf" },
-    { ticker: "BTQ", name: "btq technologies", weight: "14.67%", cost: "$2.78", returnPct: "+2018.4%", note: "compute edge; long bet" },
+    { ticker: "BTQ", name: "btq technologies", weight: "14.67%", cost: "$2.78", returnPct: "+2018.4%", note: "compute edge; long bet + SOLD testing for reentry" },
     { ticker: "CCCX", name: "[REDACTED]", weight: "[REDACTED]", cost: "[REDACTED]", returnPct: "[REDACTED]", note: "infleqtion SPAC" },
-    { ticker: "GDX", name: "vaneck gold miners etf", weight: "5.89%", cost: "$102.18", returnPct: "1.54%", note: "gold/metals hedge" },
+    { ticker: "GDX", name: "vaneck gold miners etf", weight: "5.89%", cost: "$102.18", returnPct: "+1.54%", note: "gold/metals hedge" },
     { ticker: "GOOGL", name: "alphabet class A", weight: "0.1%", cost: "$196.63", returnPct: "+79.4%", note: "ai/platform core + SOLD waiting for reentry!" },
     { ticker: "IREN", name: "[REDACTED]", weight: "[REDACTED]", cost: "[REDACTED]", returnPct: "[REDACTED]", note: "[REDACTED]" },
     { ticker: "LAC", name: "lithium americas", weight: "2.73%", cost: "$3.19", returnPct: "+52.7%", note: "lithium optionality" },
@@ -69,7 +69,15 @@ const data = {
   ],
   builds: [
     {
-      title: "recent build",
+      title: "currently building: Resonance Engine",
+      description: "Seek your Alpha. | Financial Computing and Market Intelligence Platform.",
+      cta: "explore RE",
+      href: "/noir",
+      mediaType: "image",
+      mediaSrc: "resonance_logo_exponential_particles.svg"
+    },
+    {
+      title: "latest completed build:",
       description: "latest coding project: Scott's Stocks — a full stack paper trading platform with custom charts, auth, and a fast UI.",
       cta: "view build",
       href: "/portfolio",
@@ -77,7 +85,7 @@ const data = {
       mediaSrc: "/scotts-stocks-demo.mp4"
     },
     {
-      title: "photo drop",
+      title: "alternative logo",
       description: "rzylabs alternative logo.",
       cta: "view archive",
       href: "/rzylabs-plus",

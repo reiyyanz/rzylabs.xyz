@@ -8,7 +8,7 @@ function Analytics({ kpis, equitySeries, trades }) {
         <div>
           <div className="section-title">portfolio / analytics - Our trades win.</div>
           <div className="subtext">some synthetic finance KPIs and trading signals, that reflect our actual portfolio with some privacy buffers</div>
-          <div className="subtext">Coming soon* crypto trades</div>
+          <div className="subtext"><b style={{ color: "#8b1a1a" }}>*Visuals and Trades powered by Resonance Engine Series1</b></div>
         </div>
         <div className="pill accent">As of Feb. 2026</div>
       </div>
