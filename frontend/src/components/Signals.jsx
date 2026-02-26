@@ -7,10 +7,10 @@ function Signals() {
         <div className="signal-card">
           <div className="signal-content">
             <div>
-              <div className="signal-label">rzylabs noir</div>
-              <div className="subtext">ultra-dark clothing concept. stealth drop signals.</div>
+            <div className="section-title nav-noir-text">Resonance Engine</div>
+            <div className="subtext"><i>Seek your Alpha.</i> | Financal Computing + Intelligence</div>
             </div>
-            <Link className="pill" to="/noir">coming soon</Link>
+            <Link className="pill" to="/noir">Under Development</Link>
           </div>
         </div>
         <div className="signal-card">

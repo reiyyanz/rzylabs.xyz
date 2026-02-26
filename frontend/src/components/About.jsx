@@ -13,6 +13,8 @@ function About() {
               Hey there, my name is Reiyyan (ray-on) Zafar. 
               <br></br>
               I am a fintech product analyst and the head chef for <i>rzylabs.net</i>
+              <br></br>
+              Currently building and the founder of <i>Resonance Engine</i>
             </p>
           </div>
           <div className="tile">
@@ -38,7 +40,7 @@ function About() {
           </div>
         </div>
         <div className="tile">
-          <h3>Most *probable 3D Scan of <i>Reiyyan Zafar</i></h3>
+          <h3>"3D Scan"</h3>
           <div className="about-photo-frame">
             <img src="/profile.PNG" alt="Reiyyan portrait" className="about-photo" />
           </div>
